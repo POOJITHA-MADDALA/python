@@ -1,0 +1,8 @@
+t=(10,'A',[100],(1000))
+p=list(t)
+p.insert(1, 20)
+p.insert(3, 'B')
+p[4].insert(1,200)
+#p[4].append(200)    
+p[5] = (1000, 2000)           
+print(tuple(p))
