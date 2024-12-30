@@ -1,2 +1,25 @@
-Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
+a = int(input("Enter the initial number:"))
+while True:
+    ch = input("Enter the operation(+,-,*,/):")
+    b = int(input("Enter the next number:"))
+    if ch == '+':
+        a = a + b
+        print(f"{a - b} + {b} = {a}")
+    elif ch == '-':
+        a = a - b
+        print(f"{a + b} - {b} = {a}")
+    elif ch == '*':
+        a = a * b
+        print(f"{a // b} * {b} = {a}")
+    elif ch == '/':
+        if b != 0:
+            a = a / b
+            print(f"{a * b} / {b} = {a}")
+        else:
+            print("error/0")
+    else:
+        print("Invalid operator....")
+        break
+    cont = input("Do you want to continue(Y/n):")
+    if cont.lower() != 'y':
+        break
